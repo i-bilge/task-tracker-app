@@ -63,6 +63,12 @@ const toggleDone = (toggleDoneId) => {
       />
       
       {showAddTask && <AddTask addTask={addTask} />}
+
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} deleteTask={deleteTask} toggleDone={toggleDone} />
+      ) : (
+        <p style={{textAlign: "center"}}>NO TASK TO SHOW</p>
+      )}
     </div>
   );
 }
